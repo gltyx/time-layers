@@ -79,7 +79,7 @@ var cnItems = {
     'Cost: 9e15 mm': '花费: 9e15 毫米',
     'Cost: 6e17 mm': '花费: 6e17 毫米',
     '7 spacetime compressors': '7个时空压缩器',
-    'Square Galaxy I effect if not in any galaxy or spaceless': '如果不在星系中，也不是无界，则星系 I的效果变为原来的平方',
+    'Square Galaxy I effect if not in any galaxy or spaceless': '不在星系中也不无界时，星系 I的效果变为原来的平方',
     'Cost: 1e20 mm': '花费: 1e20 毫米',
     'Cost: 1e25 mm': '花费: 1e25 毫米',
     //物理层级结束
