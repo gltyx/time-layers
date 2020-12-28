@@ -28,6 +28,7 @@ var cnItems = {
     //物理层级
     'Spacetime': '时空',
     'Nucleosynthesis': '核合成',
+    '  Space Foam is a timeless quantity': '空间泡沫不受时间影响',
     //物理层级结束
 
 
