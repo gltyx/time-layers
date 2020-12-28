@@ -75,6 +75,13 @@ var cnItems = {
     'Cost: 500 time': '花费: 500 时间',
     'Cost: 5,000 time': '花费: 5000 时间',
     'Cost: 20 compressors': '花费: 20 压缩器',
+    'This adds to your base Space Foam to make it longer': '它可以增加空间泡沫的长度',
+    'Cost: 9e15 mm': '花费: 9e15 毫米',
+    'Cost: 6e17 mm': '花费: 6e17 毫米',
+    '7 spacetime compressors': '7个时空压缩器',
+    'Square Galaxy I effect if not in any galaxy or spaceless': '如果不在星系中，也不是无界无限，则将星系 I的效果变为原来的平方',
+    'Cost: 1e20 mm': '花费: 1e20 毫米',
+    'Cost: 1e25 mm': '花费: 1e25 毫米',
     //物理层级结束
 
 
