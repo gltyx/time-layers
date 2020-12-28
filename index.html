@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Time Layers</title>
+    <title>时间层级 - Time Layers</title>
     
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -38,8 +38,8 @@
     <div id="notifs"></div>
     <div id="app">
       <div id="top" class="long block" style="height:100px;font-size:20pt">
-        The universe is <b><span class="blur">{{ game.universeAge.toTime() }}</span></b> old
-        <span style="font-size:12pt"><br>(Each real time second is equivalent to {{overallSpeed.toTime()}} of universe time)</span>
+        宇宙年龄已达 <b><span class="blur">{{ game.universeAge.toTime() }}</span></b> 之久
+        <span style="font-size:12pt"><br>(现实时间每秒等于本宇宙时间的 {{overallSpeed.toTime()}} )</span>
       </div>
       <button v-on:click = "tab = 1" class="tabButton">Layers</button>
       <button v-on:click = "tab = 2" class="tabButton">Options</button>
@@ -53,8 +53,8 @@
         </tr></table>
         <button class="long layer1 layerbutton" v-on:click = "(layertab = layertab == 1 ? 0 : 1);move=1" v-if="game.toggle.layerDisplay">Physical Layer</button>
         <div v-if="layertab == 1" class="layerDiv">
-          Multiplier to all above layers: x{{ timeLayerMult[0] }}<br>
-          This layer is {{ timeLayerSpeed[0] }}x faster than real-time
+          对此层级以上层级的加成倍率: x{{ timeLayerMult[0] }}<br>
+          此层级的时间流逝速度为现实时间的 {{ timeLayerSpeed[0] }} 倍
           <div style="margin: 15px">
           <button v-on:click = "layersubtab[0] = 1" class="layer1 laysubtab">Spacetime</button>
           <button v-on:click = "layersubtab[0] = 2" class="layer1 laysubtab" v-if="game.SEU.includes(1)">Nucleosynthesis</button>
@@ -63,7 +63,7 @@
             <table class="long"><tbody>
               <tr>
                 <td v-if="game.stinc(31)&&!game.spaceless">
-                You have <span class="blur">{{game.spaceFoam.beautify(2)}}</span>   meters of space foam<br>
+                您拥有 <span class="blur">{{game.spaceFoam.beautify(2)}}</span>   米的空间泡沫<br>
                 Space Foam is a timeless quantity
                     <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceComp()">Perform a Spatial Compression<br><br>Cost: {{spaceCompCost}}</button>
                 Each spatial compression compresses space by {{spaceCompBase}}%<br>
