@@ -65,10 +65,10 @@
                 <td v-if="game.stinc(31)&&!game.spaceless">
                 您拥有 <span class="blur">{{game.spaceFoam.beautify(2)}}</span>   米的空间泡沫<br>
                 Space Foam is a timeless quantity
-                    <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceComp()">Perform a Spatial Compression<br><br>Cost: {{spaceCompCost}}</button>
-                Each spatial compression compresses space by {{spaceCompBase}}%<br>
-                Your {{game.spaceComp.beautify()}} spatial compression compresses spacetime by {{spaceCompEffect}}x
-                  <div v-if="game.spaceComp.gte(13)&&game.stinc(15)">The better formula also multiplies Space Energy by {{game.spaceComp.minus(12).pow(game.stinc(18)?getSpacetimeCompEffect():1).beautify()}}</div>
+                    <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceComp()">Perform a Spatial Compression<br><br>花费: {{spaceCompCost}}</button>
+                每次空间压缩可将空间压缩为原来的 {{spaceCompBase}}%<br>
+                您进行了 {{game.spaceComp.beautify()}} 次空间压缩，可将时空压缩 {{spaceCompEffect}} 倍
+                  <div v-if="game.spaceComp.gte(13)&&game.stinc(15)">公式加强的升级还可以使空间能量乘以 {{game.spaceComp.minus(12).pow(game.stinc(18)?getSpacetimeCompEffect():1).beautify()}} 倍</div>
                   <table style="width: 370;margin:auto">
                     <tr>
                       <td><button v-bind:class="row1SpaceTimeUpgrade[0][0]" onclick="buySpaceTimeUpgrade(1,1)">Unlock Spacetime Foam<br><br>Cost: 2 space</button></td>
@@ -88,11 +88,11 @@
                   </table>
                 </td>
                 <td v-if="game.stinc(11)">
-                You have <span class="blur">{{game.spacetime.beautify(game.galChal==1&&game.achievement.includes(37)?Infinity:2)}}</span>   meter-seconds of spacetime foam<br>
-                You are getting {{spacetime.rate.beautify(game.galChal==1&&game.achievement.includes(37)?6:2)}} spacetime foam per second
-                    <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceTimeComp()">Perform a Spacetime Compression<br><br>Cost: {{spacetime.cost}}</button>
-                Your {{game.spacetimeComp.beautify()}} spacetime compressors gives<br>{{spacetime.effect.beautify(2)}} free spatial compressors and<br>
-                  {{spacetime.effect.gte(10)?spacetime.effect.log10().times(10).beautify(2):spacetime.effect.beautify(2)}} free temporal compressors
+                您拥有 <span class="blur">{{game.spacetime.beautify(game.galChal==1&&game.achievement.includes(37)?Infinity:2)}}</span>   米-秒的时空泡沫<br>
+                您每秒可获得 {{spacetime.rate.beautify(game.galChal==1&&game.achievement.includes(37)?6:2)}} 时空泡沫
+                    <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceTimeComp()">Perform a Spacetime Compression<br><br>花费: {{spacetime.cost}}</button>
+                您有 {{game.spacetimeComp.beautify()}} 个时空压缩器，可增加<br>{{spacetime.effect.beautify(2)}} 个免费空间压缩器及<br>
+                  {{spacetime.effect.gte(10)?spacetime.effect.log10().times(10).beautify(2):spacetime.effect.beautify(2)}} 个免费时间压缩器
                   <table style="width: 370;margin:auto">
                     <tr>
                       <td><button v-bind:class="row1SpaceTimeUpgrade[1][0]" onclick="buySpaceTimeUpgrade(2,1)">Unlock the next layer (Scroll Down)<br><br>Cost: 2e6 spacetime</button></td>
@@ -112,12 +112,12 @@
                   </table>
                 </td>
                 <td>
-                You have <span class="blur">{{game.timeFoam.beautify(2)}}</span>   seconds of time foam<br>
-                You are getting {{timeFoamSpeed}} time foam per second
+                您拥有 <span class="blur">{{game.timeFoam.beautify(2)}}</span>   秒的时间泡沫<br>
+                您每秒可获得 {{timeFoamSpeed}} 时间泡沫
                   <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buyTempComp()">Perform a Temporal Compression<br><br>Cost: {{tempCompCost}}</button>
                   <div v-if="game.tempComp.gte(1)||game.highestReset>=1">
-                Each temporal compression compresses time by {{timeCompBase}}%<br>
-                    Your {{game.tempComp.beautify()}} temporal compression compresses time by {{tempCompEffect}}x<div v-if="game.tempComp.gte(10)">Your temporal compressors is softcapped to {{game.tempComp.log10().times(10).min(15).beautify(2)}}</div>
+                每次时间压缩可将时间压缩为原来的 {{timeCompBase}}%<br>
+                    您进行了 {{game.tempComp.beautify()}} 次时间压缩，可将时间压缩 {{tempCompEffect}} 倍<div v-if="game.tempComp.gte(10)">您的时间压缩器被限制为只有 {{game.tempComp.log10().times(10).min(15).beautify(2)}} 个生效</div>
                   <table style="width: 370;margin:auto">
                     <tr>
                       <td><button v-bind:class="row1SpaceTimeUpgrade[2][0]" onclick="buySpaceTimeUpgrade(3,1)">Unlock Space Foam<br><br>Cost: 200 time</button></td>
