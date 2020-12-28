@@ -114,7 +114,7 @@
                 <td>
                 您拥有 <span class="blur">{{game.timeFoam.beautify(2)}}</span>   秒的时间泡沫<br>
                 您每秒可获得 {{timeFoamSpeed}} 时间泡沫
-                  <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buyTempComp()">Perform a Temporal Compression<br><br>Cost: {{tempCompCost}}</button>
+                  <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buyTempComp()">Perform a Temporal Compression<br><br>花费: {{tempCompCost}}</button>
                   <div v-if="game.tempComp.gte(1)||game.highestReset>=1">
                 每次时间压缩可将时间压缩为原来的 {{timeCompBase}}%<br>
                     您进行了 {{game.tempComp.beautify()}} 次时间压缩，可将时间压缩 {{tempCompEffect}} 倍<div v-if="game.tempComp.gte(10)">您的时间压缩器被限制为只有 {{game.tempComp.log10().times(10).min(15).beautify(2)}} 个生效</div>
@@ -140,15 +140,15 @@
             </tbody></table>
           </div>
           <div v-if="layersubtab[0] == 2">
-            Your Nucleosynthesis Age is <span class="blur">{{game.nucleoTime.toTime()}}</span><br>
-            Nucleosynthesis of Deuterium Nuclei occurs between 2m and {{(EN(1200).times(game.SEU.includes(3)?spaceEnergyTimeMult():1).times(game.stinc(37)?getTempCompBase():1)).toTime()}}
+            您核合成的时间为 <span class="blur">{{game.nucleoTime.toTime()}}</span><br>
+            核合成氘核发生于2分至 {{(EN(1200).times(game.SEU.includes(3)?spaceEnergyTimeMult():1).times(game.stinc(37)?getTempCompBase():1)).toTime()}} 之间
             <br><br>
-            You have <span class="blur">{{nucleoLength().times(1000).beautify(2)}}</span>   mm of deuterium nuclei
+            您拥有 <span class="blur">{{nucleoLength().times(1000).beautify(2)}}</span>   毫米的氘核
             <br>This adds to your base Space Foam to make it longer
             <table style="width: 370;margin:auto;margin-top:20px" v-if="game.achievement.includes(27)">
                     <tr>
-                      <td><button v-bind:class="nucleoUp[0]" onclick="buyNucleoUp(1)">Nucleosynthesis boosts the 6th Spacetime Upgrade by {{getNucleoEffect(1).minus(1).times(100).beautify()}}%<br>Cost: 9e15 mm</button></td>
-                      <td><button v-bind:class="nucleoUp[1]" onclick="buyNucleoUp(2)">Nucleosynthesis boosts spacetime gain by {{getNucleoEffect(2).beautify()}}x<br>Cost: 6e17 mm<br>7 spacetime compressors</button></td>
+                      <td><button v-bind:class="nucleoUp[0]" onclick="buyNucleoUp(1)">核合成使第6个时空升级的效果增加 {{getNucleoEffect(1).minus(1).times(100).beautify()}}%<br>Cost: 9e15 mm</button></td>
+                      <td><button v-bind:class="nucleoUp[1]" onclick="buyNucleoUp(2)">核合成使时空获取量增加 {{getNucleoEffect(2).beautify()}} 倍<br>Cost: 6e17 mm<br>7 spacetime compressors</button></td>
                       <td><button v-bind:class="nucleoUp[2]" onclick="buyNucleoUp(3)">Square Galaxy I effect if not in any galaxy or spaceless<br><br>Cost: 1e20 mm</button></td>
                       <td><button v-bind:class="nucleoUp[3]" onclick="buyNucleoUp(4)">???<br>Cost: 1e25 mm</button></td>
                     </tr>
