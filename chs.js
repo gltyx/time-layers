@@ -29,6 +29,23 @@ var cnItems = {
     'Spacetime': '时空',
     'Nucleosynthesis': '核合成',
     '  Space Foam is a timeless quantity': '空间泡沫不受时间影响',
+    'Perform a Spatial Compression': '进行空间压缩',
+    'Unlock Spacetime Foam': '解锁时空泡沫',
+    'Space Compression boost Time Compression (+1.5% each': '空间压缩使时间压缩的效果变得更好(每个可增加1.5%',
+    'Time Compression is 3x cheaper': '时间压缩便宜3倍',
+    'Each "space" or "time" makes compressors 2.25x cheaper': '每个“空间”或者“时间”都可以使压缩器便宜2.25倍',
+    'The upgrade above uses a better formula past 12 compressors': '上方的升级在压缩器超过12个时，公式获得加强',
+    'Square root of time foam multiplies space foam': '空间泡沫乘以时间泡沫的平方根',
+    'Space Compressors boost themselves (+3% each': '空间压缩器使自身的效果变得更好(每个可增加3%',
+    'Raise the "better formula" multiplier to your free spatial compressors': '使公式加强的倍率变为免费空间压缩器的数量',
+    'Cost: 2 space': '花费: 2 空间',
+    'Cost: 1.25 space': '花费: 1.25 空间',
+    'Cost: 1.5 space': '花费: 1.5 空间',
+    'Cost: 10 compressors': '花费: 10 压缩器',
+    'Cost: 15 compressors': '花费: 15 压缩器',
+    'Cost: 45 compressors': '花费: 45 压缩器',
+    'Cost: 240 compressors': '花费: 240 压缩器',
+    'Cost: 600 compressors': '花费: 600 压缩器',
     //物理层级结束
 
 
