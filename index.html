@@ -231,7 +231,7 @@
             
             <b>下个超新星将于 {{(game.bestStarTypes.gte(30)?(game.bestStarTypes.gte(35)?(game.bestStarTypes.gte(40)?50:40):35):30)}} 个总恒星时解锁！</b><br>
             第一个超新星的效果和恒星倍率为 {{getStarEffect().times(game.galChal==2?1:getSuperNovaEffect(1)).beautify(2)}} 倍 (您能最大化这个么？)<br>
-            <span v-if="game.bestStarTypes.gte(30)">第二个超新星的效果在无界中不触发，<span v-if="game.achievement.includes(47)">但可以在所有星系中触发</span><span v-if="!game.achievement.includes(47)">在星系1至3中也不触发</span><br></span>
+            <span v-if="game.bestStarTypes.gte(30)">第二个超新星的效果在无界中不触发，<span v-if="game.achievement.includes(47)">但可以在所有星系中触发</span><span v-if="!game.achievement.includes(47)">在星系1至星系3中也不触发</span><br></span>
             <span v-if="game.achievement.includes(47)">Your QoL achievement causes the star effect to be based on your best stars, meaning sacraficing stars will not hurt your stellar multiplier<br></span>
           </div>
           <div v-if="layersubtab[1] == 4">
@@ -243,24 +243,24 @@
         </div>
         <button class="long layer3 layerbutton" v-if="(game.stinc(35)||game.highestReset>=2)&&game.toggle.layerDisplay" v-on:click = "(layertab = layertab == 3 ? 0 : 3);move=3">Stellar Layer</button>
         <div v-if="layertab == 3">
-          Multiplier to all above layers: x{{ timeLayerMult[2] }}<br>
-          This layer is {{ timeLayerSpeed[2] }}x faster than real-time
+          对此层级以上层级的加成倍率: {{ timeLayerMult[2] }} 倍<br>
+          此层级的时间流逝速度为现实时间的 {{ timeLayerSpeed[2] }} 倍
           <div style="margin: 15px">
           <button v-on:click = "layersubtab[2] = 1" class="layer3 laysubtab">Stellar Formation</button>
           <button v-on:click = "layersubtab[2] = 3" class="layer3 laysubtab">Stellarpedia</button>
           <button v-on:click = "layersubtab[2] = 2" class="layer3 laysubtab" v-if="starMile(15)">Unique Galaxies</button>
           </div>
           <div v-if="layersubtab[2] == 1">
-          The universe has <span class="blur">{{game.starTypes.beautify()}}</span>   different types of stars, with a best of <span class="blur">{{game.bestStarTypes.beautify()}}</span>   star types
+          此宇宙有 <span class="blur">{{game.starTypes.beautify()}}</span>   个不同的恒星，最高有 <span class="blur">{{game.bestStarTypes.beautify()}}</span>   个恒星
           <!-- <br>This gives the first {{game.bestStarTypes.min(12).beautify()}} Space Energy Upgrades, all of the Row 1 upgrades, and the first {{game.bestStarTypes.div(2).floor().min(3).beautify()}} row 2 upgrades for free -->
-          <br>This multiplies Spatial Compression effect by {{getStarEffect().beautify(2)}}
-            <button class="squareMediumButton layer3" style="margin-top:30px;margin-bottom:30px" onclick="if(canPrestige(2)||game.galChal!=0){reset(2)};game.galChal=0">{{!canPrestige(2)?(game.galChal!=0?"You're currently in a galaxy. Click to exit early.":"Reach " + getStarTypeCost(game.starTypes).beautify() + " years per real time second to gain a new star"):"Reset for a new type of star!"}}
-              <span v-if="canPrestige(2)&&game.galChal==0&&game.PEU.includes(2)"><br>{{game.starTypes}} → {{getPrestige(2)}}<br><br>Next star at {{getStarTypeCost(getPrestige(2)).beautify()}}<br>years per sec</span></button>
+          <br>因此，空间压缩效果变为 {{getStarEffect().beautify(2)}} 倍
+            <button class="squareMediumButton layer3" style="margin-top:30px;margin-bottom:30px" onclick="if(canPrestige(2)||game.galChal!=0){reset(2)};game.galChal=0">{{!canPrestige(2)?(game.galChal!=0?"You're currently in a galaxy. Click to exit early.":"到达现实时间每秒等于本宇宙时间的 " + getStarTypeCost(game.starTypes).beautify() + " 年以获得新的恒星"):"Reset for a new type of star!"}}
+              <span v-if="canPrestige(2)&&game.galChal==0&&game.PEU.includes(2)"><br>{{game.starTypes}} → {{getPrestige(2)}}<br><br>下个恒星需要每秒 {{getStarTypeCost(getPrestige(2)).beautify()}}<br>年</span></button>
           </div>
           <div v-if="layersubtab[2] == 2">
             Create galaxies under the certain conditions to earn them! These galaxies give a boost in different ways!
-            <br>Your {{game.galaxies[0].beautify()}} Galaxy I increases normal energy cap by {{game.galaxies[0].beautify()}}
-            <br>You're currently {{game.galChal==0?'not in a Galaxy':'in Galaxy ' + game.galChal}}
+            <br>您拥有 {{game.galaxies[0].beautify()}} 个星系 I，因此正常能量上限增加了 {{game.galaxies[0].beautify()}}
+            <br>您目前 {{game.galChal==0?'不在星系中':'在星系 ' + game.galChal}}
             <button class="layer3 block center" style="margin-top:10px;margin-bottom:10px" onclick="if(game.galChal!=0){reset(2);game.galChal=0}">Click here to exit your galaxy</button>
             <table class="long" style="margin-top:20px;margin-bottom:20px">
               <tr>
