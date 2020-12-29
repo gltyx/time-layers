@@ -275,12 +275,12 @@
             (TIP: If you need to restart your current stellar run for any reason, you can enter a galaxy and then quickly exit)
           </div>
           <div v-if="layersubtab[2] == 3">
-            Your best amount of stars was <span class="blur">{{game.bestStarTypes.beautify()}}</span> stars. Collect them all in order to gain unique advantages!<br>The stars that are brighter than usual are the ones that yield a boost
+            您最高拥有的恒星数为 <span class="blur">{{game.bestStarTypes.beautify()}}</span> 个。尽可能多收集它们，以获得独特的加成效果！<br>比其他恒星亮的那些恒星可以提供加成
             <table class="long" style="width:1000px;margin:auto;margin-top:20px">
               <tr v-for="row in zeroSeven">
                 <td v-for="number in zeroSeven" style="width:120px">
                   <div v-bind:class="'achievement ' + (starMile(Number(row)*8+Number(number)+1)?(stellarpedia[row][number]==''?'darkgreen':'green'):(stellarpedia[row][number]==''?'darkgrey':'grey'))" v-bind:tooltip="(stellarpedia[row][number]!=''?stellarpedia[row][number]:'none')" >
-                    {{"Star " + (Number(row)*8+Number(number)+1)}}
+                    {{"恒星 " + (Number(row)*8+Number(number)+1)}}
                   </div>
                 </td>
               </tr>
