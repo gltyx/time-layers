@@ -152,6 +152,7 @@ var cnItems = {
     'Only your star types increases the compressor\'s effect with squared effect. Space Energy no longer boost Space Foam. Disable Normal Energy. Cap Time Compressors to': '只有恒星数量可以加成压缩器的效果，且效果为原来的平方。空间能量不再加成空间泡沫。正常能量无法使用。时间压缩器个数被限制为',
     'You can\'t gain any Space Energy nor Normal Energy, and their effects are useless. Cap Time Compressors to 19, but double overall speed': '您无法获得空间能量和正常能量，它们也没有任何效果。时间压缩器个数被限制为 19，但全局速度翻倍',
     'Your space foam is capped to your normal energy, Time Compressors are 10x as expensive and capped to 18, but the second supernova upgrade works': '空间泡沫的上限被限制为正常能量的数值，时间压缩器价格变为10倍，且个数被限制为 18，但第二个超新星可以生效',
+    '   (TIP: If you need to restart your current stellar run for any reason, you can enter a galaxy and then quickly exit)': '(提示: 如果您因为某些原因需要重新开始当前的恒星进程，您可以进入一个星系，然后立刻退出)',
     //恒星层级结束
 
     //原样
