@@ -84,6 +84,36 @@ var cnItems = {
     'Cost: 1e25 mm': '花费: 1e25 毫米',
     //物理层级结束
 
+    //能量层级
+    'Space Energy': '空间能量',
+    'Automation': '自动化',
+    'Normal Energy': '正常能量',
+    'Supernova!': '超新星！',
+    'Reach 1,000,000 Spacetime to prestige!': '达到1000000时空后就可以进行转生！',
+    'Unlock Nucleosynthesis': '解锁核合成',
+    'Keep all bought upgrades upon reset': '重置时保留所有已购买的升级',
+    'Excess space energy boosts time and nucleosynthesis': '超出部分的空间能量使时间和核合成的效果变得更好',
+    'Excess space energy boosts the third upgrade in each Row 1 set': '超出部分的空间能量使每项第1行的第三个升级效果变得更好',
+    'Improve Space Energy Formula and unlock Automation': '空间能量公式加强，并解锁自动化',
+    'Nucleosynthesis is raised to the ^1.5 and is twice as fast': '核合成效果变为原来的1.5次方，且速度变为2倍',
+    'The upgrade above is 3x as powerful': '上方升级的效果变为3倍',
+    'The upgrade above is 2x as powerful': '上方升级的效果变为2倍',
+    'The fourth Space Foam Upgrade is 10x better': '空间泡沫的第四个升级效果变为10倍',
+    'Nucleosynthesis is raised to the ^2 and is twice as fast': '核合成效果变为原来的2次方，且速度变为2倍',
+    'The upgrade above is 2x as powerful and unlock Normal Energy': '上方升级的效果变为2倍，并解锁正常能量',
+    'Cost: 1 SE': '花费: 1 空间能量',
+    'Cost: 5 SE': '花费: 5 空间能量',
+    'Cost: 100 SE': '花费: 100 空间能量',
+    'Cost: 1,000 SE': '花费: 1000 空间能量',
+    'Cost: 1e5 SE': '花费: 1e5 空间能量',
+    'Cost: 1e10 SE': '花费: 1e10 空间能量',
+    'Cost: 1e15 SE': '花费: 1e15 空间能量',
+    'Cost: 1e25 SE': '花费: 1e25 空间能量',
+    'Cost: 1e50 SE': '花费: 1e50 空间能量',
+    'Cost: 1e100 SE': '花费: 1e100 空间能量',
+    'Cost: 1e200 SE': '花费: 1e200 空间能量',
+    'Cost: 1e1000 SE': '花费: 1e1000 空间能量',
+    //能量层级结束
 
     //原样
     '': '',
