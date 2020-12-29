@@ -123,7 +123,12 @@ var cnItems = {
     'Cost: 5 NE': '花费: 5 正常能量',
     'Cost: 100 NE': '花费: 100 正常能量',
     'Cost: 1,000 NE': '花费: 1000 正常能量',
-    '': '',
+    'Blow them up for a temporary boost!': '让这些恒星爆发以获得临时加成！',
+    'Spatial Launch': '空间发射',
+    'Spacetime Boost': '时空加成',
+    'Perspective Push': '透视推进',
+    'Everything Else': '其余所有',
+    'Your QoL achievement causes the star effect to be based on your best stars, meaning sacraficing stars will not hurt your stellar multiplier': '由于您获得了特定的成就，恒星的效果现在是基于最高的恒星数量，这意味着使恒星爆发不再降低恒星倍率',    
     //能量层级结束
 
     //原样
