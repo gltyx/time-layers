@@ -279,7 +279,7 @@
             <table class="long" style="width:1000px;margin:auto;margin-top:20px">
               <tr v-for="row in zeroSeven">
                 <td v-for="number in zeroSeven" style="width:120px">
-                  <div v-bind:class="'achievement ' + (starMile(Number(row)*8+Number(number)+1)?(stellarpedia[row][number]==''?'darkgreen':'green'):(stellarpedia[row][number]==''?'darkgrey':'grey'))" v-bind:tooltip="(stellarpedia[row][number]!=''?stellarpedia[row][number]:'none')" >
+                  <div v-bind:class="'achievement ' + (starMile(Number(row)*8+Number(number)+1)?(stellarpedia[row][number]==''?'darkgreen':'green'):(stellarpedia[row][number]==''?'darkgrey':'grey'))" v-bind:tooltip="(stellarpedia[row][number]!=''?stellarpedia[row][number]:'无')" >
                     {{"恒星 " + (Number(row)*8+Number(number)+1)}}
                   </div>
                 </td>
