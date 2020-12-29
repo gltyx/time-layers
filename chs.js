@@ -181,7 +181,26 @@ var cnItems = {
     'Cost: 1e100 PPW': '花费: 1e100 透视能量',
     'If you made it and bought the 1e100 PPW upgrade, you\'re at the endgame. Try to reach 1e42 Normal Energy at this point until the next update comes out, because that is the requirement of the next layer!': '如果您购买了1e100透视能量的升级，那您暂时已经达到了本游戏的最后阶段。您可以尝试在下次升级之前先获得1e42的正常能量，因为那是下一层级的需求数量！',
     'Each one of these supercompressors perform a perspective reset when bought!': '购买超级压缩器时将同时进行一次透视重置！',
+    'Perform a Temporal Supercompress': '进行时间超级压缩',
     //透视层级结束
+
+    //设置
+    'Save': '保存',
+    'Export': '导出',
+    'Import': '导入',
+    'Ultimate Hard Reset': '彻底硬重置',
+    'The game is autosaved every 10 seconds. Tip: By clicking a layer tab twice in Stacked display will collapse that layer, revealing the entire set of layers. You can also changed the layer display method to tabs display, although this is uglier.': '此游戏每10秒自动保存一次。提示: 在堆叠方式下，双击一个层级将使它缩放到最小，以便您看清所有层级。您也可以将显示方式改为并列，但显示效果可能更糟糕。',
+    'Join the Discord': '加入Discord频道',
+    'Home': '官方网站',
+    //设置结束
+
+    //成就
+    'Each row of achievements corresponds to a single Prestige Layer in the game': '每一行成就都对应了游戏的一个层级',
+    'The last three achievement columns are full of rewards!': '最后三列成就可以提供加成！',
+    '': '',
+    '': '',
+    '': '',
+    //成就结束
 
     //原样
     '': '',
