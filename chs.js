@@ -144,6 +144,12 @@ var cnItems = {
     'Reset for a new type of star!': '重置以获得新的恒星！',
     'Create galaxies under the certain conditions to earn them! These galaxies give a boost in different ways!': '在下方星系中满足对应的条件即可获得它们！星系给予各种不同的加成！',
     'Click here to exit your galaxy': '点击此处退出当前的星系',
+    'Galaxy I': '星系 I',
+    'Galaxy II': '星系 II',
+    'Galaxy III': '星系 III',
+    'Galaxy IV': '星系 IV',
+    'The temporal and nucleosynthesis effects of space energy is useless, and gain 1e50x less spacetime': '空间能量的时间加速和核合成上限提升效果暂时消失，时空获取量减少1e50倍',
+    'Only your star types increases the compressor\'s effect with squared effect. Space Energy no longer boost Space Foam. Disable Normal Energy. Cap Time Compressors to': '只有恒星数量可以加成压缩器的效果，且效果为原来的平方。空间能量不再加成空间泡沫。正常能量无法使用。时间压缩器个数被限制为',
     //恒星层级结束
 
     //原样
@@ -255,6 +261,9 @@ var cnExcludeWhole = [
     /^x?\d+(\.\d+)?(e[+\-]?\d+)?\s*\-?$/, //12.34e+4
     /^\s*$/, //纯空格
     /^\s*[A-Za-z]\s*$/, //带单字母的纯空格
+    /^ 您进行了(.*)$/, //纯空格
+    /^ 您每秒可获得(.*)$/, //纯空格
+    /^转生以获得(.*)$/, //纯空格
 ];
 var cnExcludePostfix = [
     /:?\s*x?\d+(\.\d+)?(e[+\-]?\d+)?\s*$/, //12.34e+4
