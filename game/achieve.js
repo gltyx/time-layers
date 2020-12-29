@@ -90,14 +90,14 @@ const achieveData = [
       "Triple Nines for real",
     ],
     tooltip: [
-      "Own a protostar (1 star type)",
-      "Get 1 Normal Energy",
-      "Obtain a Galaxy",
-      "Obtain two Galaxies on Galaxy Types 1 and 2 each",
-      "Own three different star types",
-      "Blow up a star REWARD: You gain your stars back to your best amount each time you reset",
-      "Have 1e1000 Spacetime Foam REWARD: Very small numbers are expressed in scientific notation",
-      "Have exactly 999 Spatial Compressors REWARD: Cheapen Spacetime Compressors by 1e999",
+      "拥有第1个恒星",
+      "获得 1 正常能量",
+      "获得1个星系",
+      "在星系 I和星系 II中各获得2个星系",
+      "拥有3个不同的恒星",
+      "使恒星爆炸 奖励: 每次重置时使恒星数量回到最高值",
+      "拥有1e1000个时空泡沫 奖励: 极小的数值以科学计数法来表示",
+      "正好拥有999个空间压缩器 奖励: 时空压缩器便宜1e999倍",
     ]
   },
   {
