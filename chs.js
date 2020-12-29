@@ -94,7 +94,7 @@ var cnItems = {
     'Keep all bought upgrades upon reset': '重置时保留所有已购买的升级',
     'Excess space energy boosts time and nucleosynthesis': '超出部分的空间能量使时间和核合成的效果变得更好',
     'Excess space energy boosts the third upgrade in each Row 1 set': '超出部分的空间能量使每项第1行的第三个升级效果变得更好',
-    'Improve Space Energy Formula and unlock Automation': '空间能量公式加强，并解锁自动化',
+    'Improve Space Energy Formula and unlock Automation': '空间能量公式加强并解锁自动化',
     'Nucleosynthesis is raised to the ^1.5 and is twice as fast': '核合成效果变为原来的1.5次方，且速度变为2倍',
     'The upgrade above is 3x as powerful': '上方升级的效果变为3倍',
     'The upgrade above is 2x as powerful': '上方升级的效果变为2倍',
@@ -113,6 +113,17 @@ var cnItems = {
     'Cost: 1e100 SE': '花费: 1e100 空间能量',
     'Cost: 1e200 SE': '花费: 1e200 空间能量',
     'Cost: 1e1000 SE': '花费: 1e1000 空间能量',
+    'Exit Spaceless Early': '提前离开无界',
+    'Remove Space Compressors to go Spaceless': '移除空间压缩器以进入无界',
+    'Whenever you go Spaceless, your space compressors are disabled and spacetime is divided by': '进入无界后，空间压缩器被禁用，且时空除以',
+    'Unlock Supernovas': '解锁超新星',
+    'Excess normal energy boosts time': '超出部分的正常能量使时间的效果变得更好',
+    'Excess normal energy boosts the third upgrade in each Row 2 set': '超出部分的正常能量使每项第2行的第三个升级效果变得更好',
+    'Cost: 1e8 NE': '花费: 1e8 正常能量',
+    'Cost: 5 NE': '花费: 5 正常能量',
+    'Cost: 100 NE': '花费: 100 正常能量',
+    'Cost: 1,000 NE': '花费: 1000 正常能量',
+    '': '',
     //能量层级结束
 
     //原样
