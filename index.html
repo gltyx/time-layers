@@ -167,8 +167,8 @@
           </div>
           <div v-if="layersubtab[1] == 1">
           您拥有 <span class="blur">{{game.spaceEnergy.beautify()}}</span>   焦耳空间能量
-          <br>它可以使您免费获得前 {{game.spaceEnergy.min(3).beautify()}} 个时空升级{{game.SEU.includes(4)?"，并且使每项第1行的第三个升级效果变为原来的 " + spaceEnergyRow1Mult().minus(1).times(100).beautify(2) + "%":""}}
-          <br>它还使对此层级以上层级的加成倍率{{game.SEU.includes(3)?"及核合成上限":""}}变为原来的 {{spaceEnergyTimeMult().beautify(2)}} 倍
+          <br>它可以使您免费获得前 {{game.spaceEnergy.min(3).beautify()}} 个时空升级{{game.SEU.includes(4)?"，并且使每项第1行的第三个升级效果增加 " + spaceEnergyRow1Mult().minus(1).times(100).beautify(2) + "%":""}}
+          <br>它还使对此层级以上层级的加成倍率{{game.SEU.includes(3)?"及核合成上限":""}}增加 {{spaceEnergyTimeMult().beautify(2)}} 倍
             <button class="squareMediumButton layer2" style="margin-top:30px;margin-bottom:30px" onclick="if(canPrestige(1)){reset(1);game.spaceless=false}">{{!canPrestige(1)?"Reach 1,000,000 Spacetime to prestige!":"转生以获得 " + getPrestige(1).beautify() + (game.spaceless?" 正常能量":" 空间能量")}}</button>
           <table style="width: 370px;margin:auto">
                     <tr>
@@ -194,8 +194,8 @@
           <div v-if="layersubtab[1] == 2">
             您拥有 <span class="blur">{{game.normalEnergy.beautify()}}</span>   焦耳正常能量
             
-            <br>它使每项第2行的第三个升级效果变为原来的 {{normalEnergyRow2Mult().minus(1).times(100).beautify(2)}}%
-            <br>它还使对此层级以上层级的加成倍率{{false?"及核合成上限":""}}变为原来的 {{normalEnergyTimeMult().beautify(2)}} 倍
+            <br>它使每项第2行的第三个升级效果增加 {{normalEnergyRow2Mult().minus(1).times(100).beautify(2)}}%
+            <br>它还使对此层级以上层级的加成倍率{{false?"及核合成上限":""}}增加 {{normalEnergyTimeMult().beautify(2)}} 倍
             
             
             <button class="squareMediumButton layer2" style="margin-top:30px;margin-bottom:30px" onclick="reset(1);game.spaceless=!game.spaceless">{{game.spaceless?(canPrestige(1)?"转生以获得 " + getPrestige(1).beautify() + " 正常能量":"Exit Spaceless Early"):"Remove Space Compressors to go Spaceless"}}</button>
