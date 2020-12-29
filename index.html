@@ -156,6 +156,23 @@
           </div>
         </div>
         <button class="long layer2 layerbutton" v-on:click = "(layertab = layertab == 2 ? 0 : 2);move=2" v-if="(game.stinc(21)||game.highestReset>=1)&&game.toggle.layerDisplay">Energy Layer</button>
+        <div v-if="layersubtab[0] == 2">
+            您核合成的时间为 <span class="blur">{{game.nucleoTime.toTime()}}</span><br>
+            核合成氘核发生于2分至 {{(EN(1200).times(game.SEU.includes(3)?spaceEnergyTimeMult():1).times(game.stinc(37)?getTempCompBase():1)).toTime()}} 之间
+            <br><br>
+            您拥有 <span class="blur">{{nucleoLength().times(1000).beautify(2)}}</span>   毫米的氘核
+            <br>This adds to your base Space Foam to make it longer
+            <table style="width: 370;margin:auto;margin-top:20px" v-if="game.achievement.includes(27)">
+                    <tr>
+                      <td><button v-bind:class="nucleoUp[0]" onclick="buyNucleoUp(1)">核合成使第6个时空升级的效果增加 {{getNucleoEffect(1).minus(1).times(100).beautify()}}%<br>Cost: 9e15 mm</button></td>
+                      <td><button v-bind:class="nucleoUp[1]" onclick="buyNucleoUp(2)">核合成使时空获取量增加 {{getNucleoEffect(2).beautify()}} 倍<br>Cost: 6e17 mm<br>7 spacetime compressors</button></td>
+                      <td><button v-bind:class="nucleoUp[2]" onclick="buyNucleoUp(3)">Square Galaxy I effect if not in any galaxy or spaceless<br><br>Cost: 1e20 mm</button></td>
+                      <td><button v-bind:class="nucleoUp[3]" onclick="buyNucleoUp(4)">???<br>Cost: 1e25 mm</button></td>
+                    </tr>
+                    </table>
+          </div>
+        </div>
+        <button class="long layer2 layerbutton" v-on:click = "(layertab = layertab == 2 ? 0 : 2);move=2" v-if="(game.stinc(21)||game.highestReset>=1)&&game.toggle.layerDisplay">Energy Layer</button>
         <div v-if="layertab == 2">
           对此层级以上层级的加成倍率: {{ timeLayerMult[1] }} 倍<br>
           此层级的时间流逝速度为现实时间的 {{ timeLayerSpeed[1] }} 倍
@@ -167,7 +184,7 @@
           </div>
           <div v-if="layersubtab[1] == 1">
           您拥有 <span class="blur">{{game.spaceEnergy.beautify()}}</span>   焦耳空间能量
-          <br>它可以使您直接获得前 {{game.spaceEnergy.min(3).beautify()}} 个时空升级{{game.SEU.includes(4)?"并且使每项第1行的第三个升级效果变为原来的 " + spaceEnergyRow1Mult().minus(1).times(100).beautify(2) + "%":""}}
+          <br>它可以使您直接获得前 {{game.spaceEnergy.min(3).beautify()}} 个时空升级{{game.SEU.includes(4)?"，并且使每项第1行的第三个升级效果变为原来的 " + spaceEnergyRow1Mult().minus(1).times(100).beautify(2) + "%":""}}
           <br>它还使对此层级以上层级的加成倍率{{game.SEU.includes(3)?"及核合成上限":""}}变为原来的 {{spaceEnergyTimeMult().beautify(2)}} 倍
             <button class="squareMediumButton layer2" style="margin-top:30px;margin-bottom:30px" onclick="if(canPrestige(1)){reset(1);game.spaceless=false}">{{!canPrestige(1)?"Reach 1,000,000 Spacetime to prestige!":"转生以获得 " + getPrestige(1).beautify() + (game.spaceless?" 正常能量":" 空间能量")}}</button>
           <table style="width: 370px;margin:auto">
@@ -192,16 +209,16 @@
                     </table>
           </div>
           <div v-if="layersubtab[1] == 2">
-            You have <span class="blur">{{game.normalEnergy.beautify()}}</span>   Joule of normal energy
+            您拥有 <span class="blur">{{game.normalEnergy.beautify()}}</span>   焦耳正常能量
             
-            <br>This makes the third upgrade in each Row 2 set {{normalEnergyRow2Mult().minus(1).times(100).beautify(2)}}% stronger
-            <br>It also multiplies the above layer speed {{false?"and the nucleosynthesis cap ":""}}by {{normalEnergyTimeMult().beautify(2)}}
+            <br>它使每项第2行的第三个升级效果变为原来的 {{normalEnergyRow2Mult().minus(1).times(100).beautify(2)}}%
+            <br>它还使对此层级以上层级的加成倍率{{false?"及核合成上限":""}}变为原来的 {{normalEnergyTimeMult().beautify(2)}} 倍
             
             
-            <button class="squareMediumButton layer2" style="margin-top:30px;margin-bottom:30px" onclick="reset(1);game.spaceless=!game.spaceless">{{game.spaceless?(canPrestige(1)?"Reset for " + getPrestige(1).beautify() + " Normal Energy":"Exit Spaceless Early"):"Remove Space Compressors to go Spaceless"}}</button>
+            <button class="squareMediumButton layer2" style="margin-top:30px;margin-bottom:30px" onclick="reset(1);game.spaceless=!game.spaceless">{{game.spaceless?(canPrestige(1)?"转生以获得 " + getPrestige(1).beautify() + " 正常能量":"Exit Spaceless Early"):"Remove Space Compressors to go Spaceless"}}</button>
             
             Whenever you go Spaceless, your space compressors are disabled and spacetime is divided by 1e60<br>
-            <b style="color:red">WARNING: The volatile nature of normal energy caps your normal energy to {{game.galaxies[0].add(1).add(game.perspectivePower.floor()).beautify()}}</b>
+            <b style="color:red">注意: 由于正常能量不稳定，您的正常能量上限被限制为 {{game.galaxies[0].add(1).add(game.perspectivePower.floor()).beautify()}}</b>
             
             <table style="width: 370px;margin:auto">
                     <tr>
