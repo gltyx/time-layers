@@ -158,6 +158,7 @@ var cnItems = {
     //透视层级
     'Perspective Power': '透视能量',
     'Super Compressors': '超级压缩器',
+    'Reset for a Perspective Point!': '重置以获得1点透视！',
     'This multiplies Space Energy gain by x^5, multiplies': '它将空间能量获取量乘以它的5次方，将时空泡沫数量',
     'spacetime foam by x, and adds directly to your Normal Energy Cap': '乘以它，并直接将正常能量上限增加相应数值',
     'Also, by unlocking this layer, you keep the first column of each compressor\'s upgrade': '另外，解锁此层级以后，您可以保留每个压缩器的首列升级',
@@ -179,6 +180,7 @@ var cnItems = {
     'Cost: 1e50 PPW': '花费: 1e50 透视能量',
     'Cost: 1e100 PPW': '花费: 1e100 透视能量',
     'If you made it and bought the 1e100 PPW upgrade, you\'re at the endgame. Try to reach 1e42 Normal Energy at this point until the next update comes out, because that is the requirement of the next layer!': '如果您购买了1e100透视能量的升级，那您暂时已经达到了本游戏的最后阶段。您可以尝试在下次升级之前先获得1e42的正常能量，因为那是下一层级的需求数量！',
+    'Each one of these supercompressors perform a perspective reset when bought!': '购买超级压缩器时将同时进行一次透视重置！',
     //透视层级结束
 
     //原样
