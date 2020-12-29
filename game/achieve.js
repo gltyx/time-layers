@@ -90,8 +90,8 @@ const achieveData = [
       "Triple Nines for real",
     ],
     tooltip: [
-      "拥有第1个恒星",
-      "获得 1 正常能量",
+      "拥有原始恒星(第1个恒星)",
+      "获得1正常能量",
       "获得1个星系",
       "在星系 I和星系 II中各获得2个星系",
       "拥有3个不同的恒星",
@@ -123,14 +123,14 @@ const achieveData = [
       "Twenty Nine of Three",
     ],
     tooltip: [
-      "Gain a perspective point",
-      "Reach enough spacetime for Normal Energy while being in Galaxy 2",
-      "Reach 6e666 spacetime while in Galaxy 3 and without any compressors",
+      "获得1透视点",
+      "在星系 II中拥有足够获得正常能量的时空",
+      "没有压缩器的前提下，在星系 III中到达6e666时空",
       "For now",
       "For now",
-      "Have a Supercompressor REWARD: Keep perspective power on perspective resets",
-      "Have 1.2e21 mm of deuterium nuclei REWARD: Add massive QoL changes to Supernovas and double Normal Energy gain.",
-      "Have exactly 29 star types, spacetime, and temporal compressors REWARD: Stars are 29% more effective",
+      "拥有1个超级压缩器 奖励: 透视重置时保留透视能量",
+      "氘核长度达到1.2e21毫米 奖励: 超新星获得极大的游戏体验改动，正常能量获取量变为2倍。",
+      "正好拥有29个恒星，时空压缩器和时间压缩器 奖励: 恒星的效果增加29%",
     ]
   }
 ]
