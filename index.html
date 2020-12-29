@@ -53,7 +53,7 @@
         </tr></table>
         <button class="long layer1 layerbutton" v-on:click = "(layertab = layertab == 1 ? 0 : 1);move=1" v-if="game.toggle.layerDisplay">Physical Layer</button>
         <div v-if="layertab == 1" class="layerDiv">
-          对此层级以上层级的加成倍率: x{{ timeLayerMult[0] }}<br>
+          对此层级以上层级的加成倍率: {{ timeLayerMult[0] }} 倍<br>
           此层级的时间流逝速度为现实时间的 {{ timeLayerSpeed[0] }} 倍
           <div style="margin: 15px">
           <button v-on:click = "layersubtab[0] = 1" class="layer1 laysubtab">Spacetime</button>
@@ -157,8 +157,8 @@
         </div>
         <button class="long layer2 layerbutton" v-on:click = "(layertab = layertab == 2 ? 0 : 2);move=2" v-if="(game.stinc(21)||game.highestReset>=1)&&game.toggle.layerDisplay">Energy Layer</button>
         <div v-if="layertab == 2">
-          Multiplier to all above layers: x{{ timeLayerMult[1] }}<br>
-          This layer is {{ timeLayerSpeed[1] }}x faster than real-time
+          对此层级以上层级的加成倍率: {{ timeLayerMult[1] }} 倍<br>
+          此层级的时间流逝速度为现实时间的 {{ timeLayerSpeed[1] }} 倍
           <div style="margin: 15px">
           <button v-on:click = "layersubtab[1] = 1" class="layer2 laysubtab">Space Energy</button>
           <button v-on:click = "layersubtab[1] = 4" class="layer2 laysubtab" v-if="game.SEU.includes(5)||game.highestReset>=2">Automation</button>
@@ -166,10 +166,10 @@
           <button v-on:click = "layersubtab[1] = 3" class="layer2 laysubtab" v-if="game.NEU.includes(1)">Supernova!</button>
           </div>
           <div v-if="layersubtab[1] == 1">
-          You have <span class="blur">{{game.spaceEnergy.beautify()}}</span>   Joule of space energy
-          <br>This gives you the first {{game.spaceEnergy.min(3).beautify()}} spacetime upgrades for free {{game.SEU.includes(4)?"and also makes the third upgrade in each Row 1 set " + spaceEnergyRow1Mult().minus(1).times(100).beautify(2) + "% stronger":""}}
-          <br>It also multiplies the above layer speed {{game.SEU.includes(3)?"and the nucleosynthesis cap ":""}}by {{spaceEnergyTimeMult().beautify(2)}}
-            <button class="squareMediumButton layer2" style="margin-top:30px;margin-bottom:30px" onclick="if(canPrestige(1)){reset(1);game.spaceless=false}">{{!canPrestige(1)?"Reach 1,000,000 Spacetime to prestige!":"Reset for " + getPrestige(1).beautify() + (game.spaceless?" Normal Energy":" Space Energy")}}</button>
+          您拥有 <span class="blur">{{game.spaceEnergy.beautify()}}</span>   焦耳空间能量
+          <br>它可以使您直接获得前 {{game.spaceEnergy.min(3).beautify()}} 个时空升级{{game.SEU.includes(4)?"并且使每项第1行的第三个升级效果变为原来的 " + spaceEnergyRow1Mult().minus(1).times(100).beautify(2) + "%":""}}
+          <br>它还使对此层级以上层级的加成倍率{{game.SEU.includes(3)?"及核合成上限":""}}变为原来的 {{spaceEnergyTimeMult().beautify(2)}} 倍
+            <button class="squareMediumButton layer2" style="margin-top:30px;margin-bottom:30px" onclick="if(canPrestige(1)){reset(1);game.spaceless=false}">{{!canPrestige(1)?"Reach 1,000,000 Spacetime to prestige!":"转生以获得 " + getPrestige(1).beautify() + (game.spaceless?" 正常能量":" 空间能量")}}</button>
           <table style="width: 370px;margin:auto">
                     <tr>
                       <td><button v-bind:class="row2SEU[0]" onclick="buySEU(1)">Unlock Nucleosynthesis<br><br>Cost: 1 SE</button></td>
