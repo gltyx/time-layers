@@ -54,7 +54,7 @@ function copyStringToClipboard(str) {
   document.body.appendChild(el);
   copyToClipboard(el);
   document.body.removeChild(el);
-  $.notify("Copied to clipboard","success")
+  $.notify("已复制到剪贴板","success")
 }
 
 function copyToClipboard(el) {
