@@ -329,8 +329,8 @@
             <table class="long"><tbody>
               <tr>
                 <td v-if="false">
-                您拥有 <span class="blur">{{game.spaceComp.beautify()}}</span>   个空间压缩器<br>
-                    <button class="layer4 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceComp()">Perform a Spatial Compression<br><br>花费: {{spaceCompCost}}</button>
+                You have <span class="blur">{{game.spaceComp.beautify()}}</span>   Spatial Compressors<br>
+                    <button class="layer4 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceComp()">Perform a Spatial Compression<br><br>Cost: {{spaceCompCost}}</button>
                 Each spatial compression compresses space by {{spaceCompBase}}%<br>
                 Your {{game.spaceComp.beautify()}} spatial compression compresses spacetime by {{spaceCompEffect}}x
                   <div v-if="game.spaceComp.gte(13)&&game.stinc(15)">The better formula also multiplies Space Energy by {{game.spaceComp.minus(12).pow(game.stinc(18)?getSpacetimeCompEffect():1).beautify()}}</div>
@@ -344,7 +344,7 @@
                 </td>
                 <td v-if="false">
                 You have <span class="blur">{{game.spacetimeComp.beautify()}}</span>   Spacetime Compressors<br>
-                    <button class="layer4 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceTimeComp()">Perform a Spacetime Compression<br><br>花费: {{spacetime.cost}}</button>
+                    <button class="layer4 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceTimeComp()">Perform a Spacetime Compression<br><br>Cost: {{spacetime.cost}}</button>
                 Your {{game.spacetimeComp.beautify()}} spacetime compressors gives<br>{{spacetime.effect.beautify(2)}} free spatial compressors and<br>
                   {{spacetime.effect.gte(10)?spacetime.effect.log10().times(10).beautify(2):spacetime.effect.beautify(2)}} free temporal compressors
                   <table style="width: 370;margin:auto">
@@ -356,8 +356,8 @@
                   </table>
                 </td>
                 <td>
-                You have <span class="blur">{{game.tempComp.beautify()}}</span>   Temporal Compressors<br>
-                  <button class="layer4 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySuperTempComp()">Perform a Temporal Supercompress<br><br>需要: {{superComp.tempCost().beautify()}} compressors</button>
+                您拥有 <span class="blur">{{game.tempComp.beautify()}}</span>   个时间压缩器<br>
+                  <button class="layer4 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySuperTempComp()">Perform a Temporal Supercompress<br><br>需要: {{superComp.tempCost().beautify()}} 个压缩器</button>
                   <div v-if="game.superComp.temp.gte(1)||game.highestReset>=4">
                 Your {{game.superComp.temp.beautify()}} temporal supercompressor yields<br>{{inAnyGalChal()?"0.00":game.superComp.temp.beautify(2)}} free temporal compressors in non-galaxies
                   <table style="width: 370;margin:auto" v-if="false">
