@@ -113,7 +113,7 @@ var cnItems = {
     'Cost: 1e100 SE': '花费: 1e100 空间能量',
     'Cost: 1e200 SE': '花费: 1e200 空间能量',
     'Cost: 1e1000 SE': '花费: 1e1000 空间能量',
-    'Exit Spaceless Early': '提前离开无界',
+    'Exit Spaceless Early': '提前退出无界',
     'Remove Space Compressors to go Spaceless': '移除空间压缩器以进入无界',
     'Whenever you go Spaceless, your space compressors are disabled and spacetime is divided by': '进入无界后，空间压缩器被禁用，且时空除以',
     'Unlock Supernovas': '解锁超新星',
@@ -129,7 +129,22 @@ var cnItems = {
     'Perspective Push': '透视推进',
     'Everything Else': '其余所有',
     'Your QoL achievement causes the star effect to be based on your best stars, meaning sacraficing stars will not hurt your stellar multiplier': '由于您获得了特定的成就，恒星的效果现在是基于最高的恒星数量，这意味着使恒星爆发不再降低恒星倍率',    
+    'Spatial Compressor Autobuyer Maximum': '空间压缩器自动购买上限',
+    'Spacetime Compressor Autobuyer Maximum': '时空压缩器自动购买上限',
+    'Temporal Compressor Autobuyer Maximum': '时间压缩器自动购买上限',
+    'Type in a number to set up a maximum of which these autobuyers are going to work up to': '输入自动购买的购买数量上限',
+    'Set the number to 0 to disable the autobuyer. Set the number to -1 if you want to remove the autobuyer\'s limit': '输入0则该项自动购买失效。输入-1则不限制购买数量',
     //能量层级结束
+
+    //恒星层级
+    'Stellar Formation': '恒星阵列',
+    'Stellarpedia': '恒星百科',
+    'Unique Galaxies': '独特星系',
+    'You\'re currently in a galaxy. Click to exit early.': '您在一个星系中。点击以提前退出。',
+    'Reset for a new type of star!': '重置以获得新的恒星！',
+    'Create galaxies under the certain conditions to earn them! These galaxies give a boost in different ways!': '在下方星系中满足对应的条件即可获得它们！星系给予各种不同的加成！',
+    'Click here to exit your galaxy': '点击此处退出当前的星系',
+    //恒星层级结束
 
     //原样
     '': '',
