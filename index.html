@@ -289,17 +289,17 @@
         </div>
         <button class="long layer4 layerbutton" v-if="(game.NEU.includes(2)||game.highestReset>=3)&&game.toggle.layerDisplay" v-on:click = "(layertab = layertab == 4 ? 0 : 4);move=4">Perspective Layer</button>
         <div v-if="layertab == 4">
-          Multiplier to all above layers: x{{ timeLayerMult[3] }}<br>
-          This layer is {{ timeLayerSpeed[3] }}x faster than real-time
+          对此层级以上层级的加成倍率: {{ timeLayerMult[3] }} 倍<br>
+          此层级的时间流逝速度为现实时间的 {{ timeLayerSpeed[3] }} 倍
           <div style="margin: 15px">
           <button v-on:click = "layersubtab[3] = 1" class="layer4 laysubtab">Perspective Power</button>
           <button v-on:click = "layersubtab[3] = 2" class="layer4 laysubtab" v-if="game.PEU.includes(8)">Super Compressors</button>
           </div>
           <div v-if="layersubtab[3] == 1">
-          The universe has <span class="blur">{{game.perspectivePoint.beautify()}}</span>   points of perspective
-          <br>This generates {{getPerspectiveRate().beautify()}} Perspective Power per second (boosted by space compressors past 1 point)
+          此宇宙有 <span class="blur">{{game.perspectivePoint.beautify()}}</span>   点透视
+          <br>因此每秒可以产生 {{getPerspectiveRate().beautify()}} 透视能量 (受到超过1点的空间压缩器的加成)
           <button class="squareMediumButton layer4" style="margin-top:30px;margin-bottom:30px" onclick="canPrestige(3)?reset(3):0">{{!canPrestige(3)?"Reach " + PERSPECTIVE_REQ[game.perspectivePoint.toNumber()] + " stars to gain a Perspective Point":"Reset for a Perspective Point!"}}</button>
-          You have <span class="blur">{{game.perspectivePower.beautify()}}</span>   perspective power<br>
+          您拥有 <span class="blur">{{game.perspectivePower.beautify()}}</span>   透视能量<br>
           This multiplies Space Energy gain by x^5, multiplies<br>spacetime foam by x, and adds directly to your Normal Energy Cap<br>
           Also, by unlocking this layer, you keep the first column of each compressor's upgrade
           <table style="margin:auto;width: 370px;">
