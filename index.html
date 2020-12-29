@@ -359,7 +359,7 @@
                 您拥有 <span class="blur">{{game.tempComp.beautify()}}</span>   个时间压缩器<br>
                   <button class="layer4 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySuperTempComp()">Perform a Temporal Supercompress<br><br>需要: {{superComp.tempCost().beautify()}} 个压缩器</button>
                   <div v-if="game.superComp.temp.gte(1)||game.highestReset>=4">
-                Your {{game.superComp.temp.beautify()}} temporal supercompressor yields<br>{{inAnyGalChal()?"0.00":game.superComp.temp.beautify(2)}} free temporal compressors in non-galaxies
+                您拥有 {{game.superComp.temp.beautify()}} 个时间超级压缩器<br>可在非星系中提供 {{inAnyGalChal()?"0.00":game.superComp.temp.beautify(2)}} 个免费的时间压缩器
                   <table style="width: 370;margin:auto" v-if="false">
                     <tr>
                       <td><button v-bind:class="row4Supercomp[2][0]" onclick="buySpaceTimeUpgrade(3,1)">Unlock Space Foam<br><br>Cost: 200 time</button></td>
@@ -383,27 +383,27 @@
         <button onclick="copyStringToClipboard(btoa(JSON.stringify(game)))">Export</button>
         <button onclick="
           let loadgame = '';
-          loadgame = JSON.parse(atob(prompt('Paste in your save WARNING: WILL OVERWRITE YOUR CURRENT SAVE, paste in nothing if you want to keep your current save')));
+          loadgame = JSON.parse(atob(prompt('此处粘贴您的存档字符串 注意: 将覆盖当前游戏进度')));
           if (prompt !== '' && loadgame !== '') {
             load(loadgame);
-            $.notify('Import successful!','success')}">Import</button>
+            $.notify('导入成功！','success')}">Import</button>
         <button onclick="
                         let deathPrompt = '';
-                        deathPrompt = prompt('Are you sure you want to reset your game? Type in the phrase \'Time Layers was the worst game I ever played\' if you want to reset your entire game')
+                        deathPrompt = prompt('您确定要完全重置游戏吗？如果要这么做，请在下方输入\'Time Layers was the worst game I ever played\'(引号内的部分，不含引号)')
                         if (deathPrompt == 'Time Layers was the worst game I ever played') {
                            reset(Infinity);
-                           $.notify('Hard Reset Sucessful!','success')
+                           $.notify('硬重置成功！','success')
                          }
                          
                          ">Ultimate Hard Reset</button>
-        <button onclick="toggle('layerDisplay')">Layer Display Method: {{game.toggle.layerDisplay?'Stacked':'Tabs'}}</button>
-        <button onclick="toggle('autoscroll')">Autoscroll upon switching layer tabs: {{onOff('autoscroll')}}</button>
+        <button onclick="toggle('layerDisplay')">层级显示方式: {{game.toggle.layerDisplay?'堆叠':'并列'}}</button>
+        <button onclick="toggle('autoscroll')">切换层级时自动滚动: {{onOff('autoscroll')}}</button>
         <p>The game is autosaved every 10 seconds. Tip: By clicking a layer tab twice in Stacked display will collapse that layer, revealing the entire set of layers. You can also changed the layer display method to tabs display, although this is uglier.</p>
         <p><a href="https://discord.gg/RerPeNA">Join the Discord</a></p>
         <p><a href="https://patcailmemer.github.io/">Home</a></p>
       </div>
       <div v-if="tab == 3">
-        You have <span class="blur">{{game.achievement.length}}</span>   achievements!<br>Each row of achievements corresponds to a single Prestige Layer in the game<br>The last three achievement columns are full of rewards!
+        您拥有 <span class="blur">{{game.achievement.length}}</span>   个成就！<br>Each row of achievements corresponds to a single Prestige Layer in the game<br>The last three achievement columns are full of rewards!
         <table class="long" style="width:1000px;margin:auto;margin-top:20px">
           <tr v-for="row in [0,1,2,3]">
             <td v-for="number in zeroSeven" style="width:120px" v-if="row<=game.highestReset">
