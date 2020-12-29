@@ -150,6 +150,8 @@ var cnItems = {
     'Galaxy IV': '星系 IV',
     'The temporal and nucleosynthesis effects of space energy is useless, and gain 1e50x less spacetime': '空间能量的时间加速和核合成上限提升效果暂时消失，时空获取量减少1e50倍',
     'Only your star types increases the compressor\'s effect with squared effect. Space Energy no longer boost Space Foam. Disable Normal Energy. Cap Time Compressors to': '只有恒星数量可以加成压缩器的效果，且效果为原来的平方。空间能量不再加成空间泡沫。正常能量无法使用。时间压缩器个数被限制为',
+    'You can\'t gain any Space Energy nor Normal Energy, and their effects are useless. Cap Time Compressors to 19, but double overall speed': '您无法获得空间能量和正常能量，它们也没有任何效果。时间压缩器个数被限制为 19，但全局速度翻倍',
+    'Your space foam is capped to your normal energy, Time Compressors are 10x as expensive and capped to 18, but the second supernova upgrade works': '空间泡沫的上限被限制为正常能量的数值，时间压缩器价格变为10倍，且个数被限制为 18，但第二个超新星可以生效',
     //恒星层级结束
 
     //原样
@@ -261,13 +263,20 @@ var cnExcludeWhole = [
     /^x?\d+(\.\d+)?(e[+\-]?\d+)?\s*\-?$/, //12.34e+4
     /^\s*$/, //纯空格
     /^\s*[A-Za-z]\s*$/, //带单字母的纯空格
-    /^ 您进行了(.*)$/, //纯空格
-    /^ 您每秒可获得(.*)$/, //纯空格
-    /^转生以获得(.*)$/, //纯空格
+    /^\s*您进行了(.*)$/, //不抓取内容
+    /^\s*您每秒可获得(.*)$/, //不抓取内容
+    /^转生以获得(.*)$/, //不抓取内容
+    /^\s*每次空间压缩可将空间压缩为原来的(.*)$/, //不抓取内容
+    /^此层级的时间流逝速度为现实时间的(.*)$/, //不抓取内容
+    /^对此层级以上层级的加成倍率(.*)$/, //不抓取内容
+    /^公式加强的升级还可以使空间能量乘以(.*)$/, //不抓取内容
+    /^它还使对此层级以上层级的加成倍率及核合成上限变为原来的(.*)$/, //不抓取内容
+    /^现实时间每秒等于本宇宙时间的(.*)$/, //不抓取内容
 ];
 var cnExcludePostfix = [
     /:?\s*x?\d+(\.\d+)?(e[+\-]?\d+)?\s*$/, //12.34e+4
     /:?\s*x?\d+(\.\d+)?[A-Za-rt-z]{0,2}$/, //: 12.34K, x1.5
+    /个免费时间压缩器$/, //不抓取内容
     /秒$/, //不抓取时间
     /分$/, //不抓取时间
     /时$/, //不抓取时间
