@@ -3,7 +3,7 @@ function toggle(x) {
 }
 
 function onOff(x) {
-  return game.toggle[x] ? "ON" : "OFF"
+  return game.toggle[x] ? "开" : "关"
 }
 
 /*
