@@ -68,7 +68,7 @@
                     <button class="layer1 squareMediumButton" style="margin-top: 30px;margin-bottom:20px" onclick="buySpaceComp()">Perform a Spatial Compression<br><br>花费: {{spaceCompCost}}</button>
                 每次空间压缩可将空间压缩为原来的 {{spaceCompBase}}%<br>
                 您进行了 {{game.spaceComp.beautify()}} 次空间压缩，可将时空压缩 {{spaceCompEffect}} 倍
-                  <div v-if="game.spaceComp.gte(13)&&game.stinc(15)">公式加强的升级还可以使空间能量乘以 {{game.spaceComp.minus(12).pow(game.stinc(18)?getSpacetimeCompEffect():1).beautify()}} 倍</div>
+                  <div v-if="game.spaceComp.gte(13)&&game.stinc(15)">公式加强的升级还可以使空间能量乘以 {{game.spaceComp.minus(12).pow(game.stinc(18)?getSpacetimeCompEffect():1).beautify()}}</div>
                   <table style="width: 370;margin:auto">
                     <tr>
                       <td><button v-bind:class="row1SpaceTimeUpgrade[0][0]" onclick="buySpaceTimeUpgrade(1,1)">Unlock Spacetime Foam<br><br>Cost: 2 space</button></td>
