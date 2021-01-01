@@ -170,6 +170,7 @@ var cnItems = {
     'Keep your best star types through Perspectives': '透视中保留最高的恒星数量',
     'You keep your galaxies': '保留所有星系',
     'Unlock Super-Compressors': '解锁超级压缩器',
+    'Unlock the next layer and 1e10x PPW': '解锁下一个层级，透视能量获取量变为1e10倍',
     'Cost: 100 PPW': '花费: 100 透视能量',
     'Cost: 1,000 PPW': '花费: 1000 透视能量',
     'Cost: 100,000 PPW': '花费: 100000 透视能量',
