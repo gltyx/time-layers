@@ -401,5 +401,5 @@ var cnExcludePostfix = [
 //小数点：([\d\.]+)
 //原样输出的字段：(.+)
 var cnRegReplace = new Map([
-    [/^(.+)s until \+(\d+) export Quark$/, '距离下次增加导出奖励：$2夸克还有$1秒'],
+    [/^(.d+)Just make up for the space(\d+)$/, '纯举例用意'],
 ]);
