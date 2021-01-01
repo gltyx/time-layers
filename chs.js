@@ -236,7 +236,7 @@ var cnItems = {
     'New Achievement: Computer Byte Master': '新成就: 电脑字节大师',
     'New Achievement: SI units finally': '新成就: 终于到公制单位了',
     'New Achievement: All of your upgrades belong to us': '新成就: 你的升级归我了',
-    'New Achievement: NEIN NEIN NEIN': '新成就: 不不不',
+    'New Achievement: NEIN NEIN NEIN': '新成就: 九九九',
     'New Achievement: Four Minute Mile': '新成就: 四分钟的迈数',
     'New Achievement: Two Hour Marathon': '新成就: 两小时的马拉松',
     'New Achievement: Neutron Star': '新成就: 中子星',
